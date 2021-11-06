@@ -13,7 +13,7 @@ html {
   }
   
   
-  .container {
+   .container {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -46,35 +46,12 @@ html {
     padding: 5px;
     padding-left: 20px;
   }
-  .add {
-    padding: 2px;
-    min-height: 24px;
   
+  input {
+    background-color: #d8d8d8;
+    
   }
-  .add input {
-    display: block;
-    margin: 0.05em auto;
-    padding: 0.2em 0.2em;
-    border: none;
-    text-align: center;
-    border-radius: 0.2em;
-    font-size: 1em;
-    box-shadow: 0 0 1em 0.25em rgba(0,0,0,0.2); 
-  }
-  .add button {
-      box-shadow: 1px 1px 0px 0px #899599;
-      background:linear-gradient(to bottom, #30383f 5%, #6a8c82 100%);
-      background-color:#ededed;
-      border-radius:5px;
-    border: none;
-      display:inline-block;
-      cursor:pointer;
-      color:#fae8e8;
-      font-family:Arial;
-      font-size:14px;
-      padding:2px 6px;
-      text-decoration:none;
-  }
+  
   input:invalid {
     border: 2px solid red;
   }
@@ -88,11 +65,11 @@ html {
   .list ul li i:hover{
     color: #ff0040;
   }
-  .add button:hover {
-      background:linear-gradient(to bottom, #6a8c82 5%, #30383f 100%);
-      background-color:#bab1ba;
+  .add-task button:hover {
+    background-color:#dbdbdb;
+    border-radius: 3px;
   }
-  .add button:active {
+  .add-task button:active {
       position:relative;
       top:1px;
   }
@@ -125,5 +102,10 @@ html {
   }
   
   button.nollaa {
-    max-width: 18px;
+    max-width: 100px;
+  }
+
+  button.nollaa:hover {
+    background-color: #ff004080;
+    border-radius: 3px;
   }

@@ -3,13 +3,13 @@ let formElement = document.querySelector('form');
 let listElement = document.querySelector('ul');
 
 let taskList = [];
-//*Delete function*//
+        //*Delete function*//
 function deleteListItem(i) {
   taskList.splice(i, 1);
   populateList();
   //* alert("Tehtävä poistettu"); <-- lähinnä ärsyttävä, joten ei käytössä *//
 }
-//*Populate list*//
+        //*Populate list*//
 function populateList() {
   listElement.innerHTML = "";
   taskList.forEach((item, i) => {
@@ -19,7 +19,7 @@ function populateList() {
     span.innerHTML = item;
     newItem.appendChild(span);
 
-    //delete nappi//
+        //delete nappi//
     let anchorElement = document.createElement('a');
     anchorElement.innerHTML = '<i class="fas fa-trash-alt"></i>';
     newItem.appendChild(anchorElement);
@@ -30,7 +30,7 @@ function populateList() {
 }
 populateList();
 
-//*addtask*/
+        //*Lisaa tehtävä*/
 function addTask() {
   if (inputElement.value) {
     taskList.push(inputElement.value);
@@ -38,7 +38,7 @@ function addTask() {
   }
 };
 
-//*merkkaa "tehdyksi"*//
+        //*merkkaa "tehdyksi"*//
 var list = document.querySelector('ul');
 list.addEventListener('click', function (ev) {
   if (ev.target.tagName === 'LI') {
@@ -49,7 +49,7 @@ formElement.addEventListener('submit', function (e) {
   addTask();
 });
 
-//*Local storage tehtävälaskuri*//
+        //*Local storage tehtävälaskuri*//
 function laskuri() {
   if (typeof (Storage) !== "undefined") {
     if (localStorage.count) {
@@ -62,7 +62,9 @@ function laskuri() {
     document.getElementById("result").innerHTML = "Selain ei tue local storagen käyttöä...";
   }
 };
+        
 
+        //* Local storagen tyhjennys *//
 function tyhjenna() {
   localStorage.clear();
 }
