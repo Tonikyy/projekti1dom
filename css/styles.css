@@ -1,0 +1,129 @@
+html {
+    margin: 0;
+    padding: 150px;
+    background: linear-gradient(#1c1c1b, #a8a7a1);
+    height: 68vh;
+  }
+  
+  body {
+    min-width: 100vh;
+    width: 100%;
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  
+  .container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .todo-list {
+    height: 650px;
+    min-width: 450px;
+    max-width: 600px;
+    background: #dbdad2;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 50px #d8d8d8;
+    border-radius: 2%;
+  }
+  .header {
+    padding: 15px;
+  }
+  .header h1 {
+    text-align: center;
+    color: #1c1c1b;
+  }
+  .list {
+    flex-grow: 1;
+    overflow-y: scroll;
+    padding: 5px;
+    padding-left: 20px;
+  }
+  .add {
+    padding: 2px;
+    min-height: 24px;
+  
+  }
+  .add input {
+    display: block;
+    margin: 0.05em auto;
+    padding: 0.2em 0.2em;
+    border: none;
+    text-align: center;
+    border-radius: 0.2em;
+    font-size: 1em;
+    box-shadow: 0 0 1em 0.25em rgba(0,0,0,0.2); 
+  }
+  .add button {
+      box-shadow: 1px 1px 0px 0px #899599;
+      background:linear-gradient(to bottom, #30383f 5%, #6a8c82 100%);
+      background-color:#ededed;
+      border-radius:5px;
+    border: none;
+      display:inline-block;
+      cursor:pointer;
+      color:#fae8e8;
+      font-family:Arial;
+      font-size:14px;
+      padding:2px 6px;
+      text-decoration:none;
+  }
+  input:invalid {
+    border: 2px solid red;
+  }
+  
+  
+  .list ul li i{
+    cursor: pointer;
+    color: #510416;
+    padding: 9px;
+  }
+  .list ul li i:hover{
+    color: #ff0040;
+  }
+  .add button:hover {
+      background:linear-gradient(to bottom, #6a8c82 5%, #30383f 100%);
+      background-color:#bab1ba;
+  }
+  .add button:active {
+      position:relative;
+      top:1px;
+  }
+  
+  .list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .list ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    padding-bottom: 10px;
+  }
+  
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #adadad;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #74736f;
+    color: rgb(0, 0, 0);
+    text-decoration: line-through;
+  }
+  
+  button.nollaa {
+    max-width: 18px;
+  }

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/2b070e02a1.js" crossorigin="anonymous"></script>
+    <title>Todo -lista</title>
+</head>
+
+<body>
+    <script src="js/todo.js" defer></script> 
+
+        <!-- Sisältö -->
+
+<div class="container">
+    <div class="todo-list">
+        <div class="header">
+            <h1><span>Tehtävälista</span></h1>
+        </div>
+        <form class="add-task">
+            <!--input + alert teksti-->
+            <input 
+            type="text"
+             placeholder="Syötä tehtävä" 
+             minlength="3" 
+             oninvalid="this.setCustomValidity('Syötä vähintään 3 merkkiä!')" 
+             onchange="try{setCustomValidity('')}catch(e){}"
+             >
+             
+             <!--lisää nappi-->
+             <button onclick="laskuri()">
+                <b class="btn-text" >Lisää</b>
+            </button>
+        </form>
+        <div class="list">
+            <ul>
+        
+            </ul>
+            
+        </div>
+        <div id="result">
+        </div>
+        <div id="nollaus">
+            <button id="nollaa" onclick="tyhjenna()">Nollaa laskuri</button>
+        </div>
+        <br>
+    </div>
+</div>
+</body>
+
+
+</html>
